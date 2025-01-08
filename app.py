@@ -1,18 +1,13 @@
-"""A doc"""
 import time
 import osxphotos
 MAX_PHOTOS = 10000  # Maximum number of photos to download
 
 def my_function():
-    # Load the Photos library
-    photosdb = osxphotos.PhotosDB()
-
-
-    # Get all photos
-    photos = photosdb.photos()
-
+    photosdb = osxphotos.PhotosDB()     # Load the Photos library
+    photos = photosdb.photos()     # Get all photos
     print(f"Downloading up to {MAX_PHOTOS} photos")
     photo_count = 0
+    
     for photo in photos:
         if photo_count >= MAX_PHOTOS:
             print("Downloaded enough photos, stopping...")
