@@ -1,7 +1,10 @@
 import time
 import osxphotos
-MAX_PHOTOS = 10000  # Maximum number of photos to download
+MAX_PHOTOS = 10  # Maximum number of photos to download
 
+NB = """This script currently fails on access to 
+'/Users/jd/Pictures/Photos Library.photoslibrary/database/photos.db'
+"""
 def my_function():
     photosdb = osxphotos.PhotosDB()     # Load the Photos library
     photos = photosdb.photos()     # Get all photos
